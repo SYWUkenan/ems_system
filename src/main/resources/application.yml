@@ -12,8 +12,12 @@ spring:
     password: 123456
   web:
     resources:
-      static-locations: classpath:/templates/,classpath/static/
+      static-locations: classpath:/templates/,classpath:/static/
+
+
+
+
 
 mybatis:
   mapper-locations: classpath:/com/yswu/mapper/*.xml
-  type-aliases-package: com.yswu.entity
+  type-aliases-package: com.yswu.ems.entity
