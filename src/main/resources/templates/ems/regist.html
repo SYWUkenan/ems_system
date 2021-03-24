@@ -72,6 +72,7 @@
                         <td valign="middle" align="right">
                             验证码:
                             <img id="num" th:src="@{/user/code}"/>
+
                             <a href="javascript:;"
                                onclick="document.getElementById('num').src = '/ems/user/code?'+(new Date()).getTime()">换一张</a>
                         </td>

@@ -16,4 +16,9 @@ public class LoginController {
     public String toIndex(){
         return "/ems/login";
     }
+
+    @GetMapping("toRegister")
+    public String toRegister(){
+        return "/ems/regist";
+    }
 }
