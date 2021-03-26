@@ -2,10 +2,10 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
 <mapper namespace="com.yswu.ems.dao.UserDao">
 
-    <!--注册-->
-    <insert id="save" parameterType="User">
-   insert into t_user values (#{id},#{username},#{realname},#{paeeword},#{sex})
 
-</insert>
+    <!--注册-->
+     <insert id="save" parameterType="com.yswu.ems.entity.User">
+        insert into t_user values (#{id},#{username},#{realname},#{paeeword},#{sex})
+    </insert>
 
 </mapper>

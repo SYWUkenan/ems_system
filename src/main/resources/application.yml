@@ -19,5 +19,8 @@ spring:
 
 
 mybatis:
-  mapper-locations: classpath:/com/yswu/mapper/*.xml
+  mapper-locations: classpath:mapper/*.xml
+
+
+
   type-aliases-package: com.yswu.ems.entity
