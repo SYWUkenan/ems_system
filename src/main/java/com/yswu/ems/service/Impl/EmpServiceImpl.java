@@ -23,4 +23,26 @@ public class EmpServiceImpl implements EmpService {
     public List<Employees> finaAll() {
         return empDao.findAll();
     }
+
+    @Override
+    public void save(Employees employees) {
+        empDao.save(employees);
+
+    }
+
+    @Override
+    public void update(Employees employees) {
+        empDao.update(employees);
+    }
+
+    @Override
+    public Employees find(String id) {
+        return empDao.find(id);
+    }
+
+    @Override
+    public void delete(String id) {
+        empDao.delete(id);
+
+    }
 }

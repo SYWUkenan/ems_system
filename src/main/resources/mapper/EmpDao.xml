@@ -2,7 +2,34 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
 <mapper namespace="com.yswu.ems.dao.EmpDao">
 
-    <!--查询员工-->
+
+
+    <!--修改员工-->
+    <update id="update" parameterType="com.yswu.ems.entity.Employees">
+
+        update  t_emp set name=#{name},salary=#{salary},age=#{age},bir=#{bir}
+        where id = #{id}
+
+    </update>
+    <!--根据id查询员工-->
+    <select id="find" parameterType="string" resultType="com.yswu.ems.entity.Employees">
+
+        select id,name,salary,age,bir from t_emp
+        where id=#{id}
+    </select>
+
+    <!--删除员工-->
+    <delete id="delete" parameterType="string">
+
+        delete from t_emp where id=#{id}
+    </delete>
+
+    <!--增加员工-->
+    <insert id="save" parameterType="com.yswu.ems.entity.Employees">
+  insert into t_emp values (#{id},#{name},#{salary},#{age},#{bir})
+
+</insert>
+    <!--查询所有员工-->
     <select id="findAll" resultType="com.yswu.ems.entity.Employees">
     select id,name,salary,age,bir from t_emp
 

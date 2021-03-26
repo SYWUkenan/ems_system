@@ -21,4 +21,10 @@ public class LoginController {
     public String toRegister(){
         return "/ems/regist";
     }
+
+    @GetMapping("/toSave")
+    public String toSave(){
+        return "/ems/addEmp";
+    }
+
 }

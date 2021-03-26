@@ -11,4 +11,8 @@ import java.util.List;
 public interface EmpService {
 
     List<Employees> finaAll();
+    void save(Employees employees);
+    void delete(String id);
+    Employees find(String id);
+    void update(Employees employees);
 }

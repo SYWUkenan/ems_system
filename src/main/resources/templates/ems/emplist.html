@@ -27,7 +27,7 @@
             <p id="whereami">
             </p>
             <h1>
-                Welcome!
+                Welcome!<span th:text="${session.user.username}"></span>
             </h1>
             <table class="table">
                 <tr class="table_header">
@@ -70,13 +70,16 @@
 
                     <td>
                         <a th:href="@{/emp/delete(id=${emp.id})}">删除信息</a>&nbsp;
+
                         <a th:href="@{/emp/find(id=${emp.id})}">修改信息</a>
                     </td>
                 </tr>
 
             </table>
             <p>
-                <input type="button" class="button" value="添加员工" onclick="location.href='/ems/toSave'"/>
+                <input type="button" class="button" value="添加员工"
+
+                       onclick="location.href='/ems/toSave'"/>
             </p>
         </div>
     </div>

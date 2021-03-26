@@ -10,4 +10,8 @@ import java.util.List;
  */
 public interface EmpDao {
     List<Employees> findAll();
+    void save(Employees employees);
+    void delete(String id);
+    Employees find(String id);
+    void update(Employees employees);
 }
